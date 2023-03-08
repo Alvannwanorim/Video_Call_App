@@ -4,56 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Video Call</title>
+    <title>Document</title>
     <link rel="stylesheet" href="public/Assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="public/Assets/css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-md fixed-top">
-        <img src="public/Assets/images/google-meet-icon.png  " class="logo" alt="logo alt">
-        <a href="#" class="navbar-brand text-dark">Google Meet</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">At a glance</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">How it works</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Plan and price</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav mr-0">
-                <li class="nav-item sign-in display-center">
-                    <a href="#" class="nav-link">Sign in</a>
-                </li>
-                <li class="nav-item">
-                    <button class="btn btn-outline-secondary btn-lg text-info font-weight-bold">
-                        Join the meeting
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button class="btn btn-lg btn-info  text-light font-weight-bold">
-                        Start a meeting
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <main>
-        <div class="jumbotron h-100 d-flex">
-            <div class="container w-50">
-                <h1 style="font-size: 3rem;">Premium video meeting, Now it is available for free for everyone.</h1>
-                <p style="font-size: 20px;">We're redesigning the Google Meet service for secure business and meetings and making it free for 
-                    everyone
-                </p>
+    <main class="container-fluid d-flex flex-column home-wrap">
+        <div class="g-top">
+            <div class="top-remote-video-show-wrap d-flex">
+                <div id="meetingContainer"  style="display: none;flex-basis: 75%;">
+                    <div class="call-wrap" style="background-color: black;">
+                        <div class="video-wrap" id="divUsers" style="display:flex; flex-wrap:wrap">
+                            <div id="me" class="userbox display-center flex-column">
+                                <h2 class="display-center" style="font-size: 14px;"></h2>
+                                <div class="display-center">
+                                    <video autoplay muted id="locaVideoPlayer"></video>
+                                </div>
+                            </div>
+                            <div id="otherTemplate" class="userbox display-center flex-column" style="display:none">
+                                <h2 class="display-center" style="font-size: 14px;"></h2>
+                                <div class="display-center">
+                                    <video autoplay muted></video>
+                                    <audio autoplay controls style="display:none"></audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="container w-50">
-                
-            </div>
+         </div>
+            <div class="g-top-left bg-light text-secondary w-25 
+            d-flex align-items-center justify-content-between pl-2"></div>
         </div>
+        <div class="g-bottom"></div>
     </main>
 </body>
 </html>
